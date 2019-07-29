@@ -1,31 +1,9 @@
 import React, { Component} from 'react';
 import '../App.css';
 import Searchbar from './searchbar'
-import Searchresults from './searchresults';
-var Amadeus = require('amadeus');
 
-var amadeus = new Amadeus({
-  clientId: 'SkRgrixdRtoF0kPj1XNtsbDMsRvwP2O5',
-  clientSecret: 'b1Dw8ufFqZaTCI64'
-});
-
-if(amadeus){
-  console.log('THIS WORKS')
-}
 
 class Canvas extends Component {  
-  onSubmit(){
-    amadeus.referenceData.urls.checkinLinks.get({
-      airlineCode: 'BA'
-    }).then(function(response){
-      console.log(response.data);
-      console.log('THE EAGLE HAS LANDED')
-
-    }).catch(function(responseError){
-      console.log(responseError.code);
-      console.log('onSubmit in canvas.js has failed!')
-    });
-  }
 
   componentDidMount(){
     console.log('CANVAS-component did mount')
@@ -35,8 +13,9 @@ class Canvas extends Component {
   render(){
       return(
         <div className="canvas">
-        canvas works
-        SKIP THE LINE - DESTINATIONS WITH LESS CROWD AND MORE FUN
+        <div class="w3-bar w3-blue">
+        <a href="#" class="w3-button"><h3>SKIP THE CROWD</h3></a>
+        </div>
         <Searchbar/>
         </div>
       );

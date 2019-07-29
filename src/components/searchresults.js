@@ -13,18 +13,14 @@ class Searchresults extends Component {
         console.log(response.data)
         this.setState({songs:response.data})
       });
-     */ 
-    
+     */   
   }
 
   render(){
-    //var songs1={"Munich":"munich.mp3","Rainy Zurich":"rainyZurich.mp3","Take It Easy":"takeItEasy.mp3"}
     var elements=[]
     /*
-    
     GOOD EXAMPLE OF ITERATING THROUGH DICTIONARIES IN JAVASCRIPT
     https://stackoverflow.com/questions/34913675/how-to-iterate-keys-values-in-javascript
-
     */
     var songs1=this.props.list
     for (var key in songs1) {
@@ -36,9 +32,7 @@ class Searchresults extends Component {
 
     return(
         <div className="song-list"> 
-      {elements}
-          SEARCH RESULTS
-          
+        {elements}
         </div>
       );
   }
