@@ -26,12 +26,14 @@ class Searchresults extends Component {
     for (var key in songs1) {
       console.log('hello from SEARCH RESULTS')
       console.log(key, songs1[key])
-      elements.push(<SearchResultItems songName={key} src={songs1[key]} action={this.props.action}/>)
+      elements.push(<SearchResultItems number={key} destination={songs1[key].destination} action={this.props.action}/>)
       }
 
 
     return(
         <div className="song-list"> 
+        <br/>
+        <div class="w3-display-middle">Search Results (0.2 seconds)</div>
         {elements}
         </div>
       );

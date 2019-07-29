@@ -15,6 +15,7 @@ class Canvas extends Component {
         <div className="canvas">
         <div class="w3-bar w3-blue">
         <a href="#" class="w3-button"><h3>SKIP THE CROWD</h3></a>
+        <img src="images/powered-by.png" height="50px" width="auto"/>
         </div>
         <Searchbar/>
         </div>

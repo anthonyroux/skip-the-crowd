@@ -10,17 +10,22 @@ class SearchResultItems extends Component {
       console.log(this)
       return;
       }
-  
-    /* CHANGE PARENT STATE FROM CHILD 
-        Pass a handler function as prop to the child to achieve this
-        https://www.techiediaries.com/access-update-parent-state-child-component-react/ 
-    */
-    //<Audioplayer src={"/test-audio/" + this.props.src} /> 
+      myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
     render(){
   
         return(
-          <div className="one-song">
-          <a onClick={() => this.props.action(`/test-audio/${this.props.src}`)}>{this.props.songName }</a>
+          <div>
+            <br/>
+          <div className="w3-container w3-grey">
+          <a onClick={() => this.props.action(`/test-audio/${this.props.src}`)}>{this.props.destination }</a>
+          <button class="w3-button w3-red popup" onclick="${myFunction()}">
+                BOOK TRIP
+              </button>
+          </div>
+          
           </div>
         );
     }
