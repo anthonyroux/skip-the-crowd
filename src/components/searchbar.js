@@ -58,7 +58,7 @@ class Searchbar extends Component {
     var timeQuery = ans[2]+"-"+ ((ans[0]/10)<1 ? "0" + ans[0] : ans[0])
 
     console.log(`departure: ${document.getElementById('departure').value} and period: ${timeQuery}`)
-    
+
     amadeus.travel.analytics.airTraffic.traveled.get({
       originCityCode : document.getElementById('departure').value,
       period : timeQuery
@@ -121,7 +121,7 @@ class Searchbar extends Component {
     const selectedDays = [from, { from, to: enteredTo }];
     return (
       <div class="w3-display-middle">
-        <img src="images/logo.png"/> <br/>
+        <img src="images/logo.png"/> <img src="images/powered-by.png" height="50px" width="auto"/><br/>
         <input type="text" class="w3-input w3-border" id="departure" placeholder="enter departure airport"></input>
         <br/> Select departure date range
         <DayPicker
